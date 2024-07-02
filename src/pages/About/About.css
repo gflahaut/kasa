@@ -1,0 +1,17 @@
+.about-page {
+  width: 1240px;
+}
+
+.about-page .about-content {
+  margin-top: 20px;
+  width: 1240px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-page .collapse .about-style {
+  margin: 0 20px 0 20px;
+}
