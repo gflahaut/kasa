@@ -1,0 +1,39 @@
+
+.home {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+    .section{
+      width: 90%;
+      height: 223px;
+      margin:auto;
+      margin-bottom: 2em;
+    }
+    .housing-section{
+      width: 90%;
+      margin: auto;
+      flex-direction: row;
+      background-color: #f2e5e5;
+      border-radius: 10px;
+    }
+    .housing-container{
+      width: 90%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: auto;
+    }
+    .housing-container > * {
+      flex: 0 0 33.33%;
+    }
+    .housing-card{
+      width: 400px;
+      padding: 0;
+    }
+    div#grid-container{
+      margin-bottom: 2em;
+      margin-top: 1em;
+    }
+  }
