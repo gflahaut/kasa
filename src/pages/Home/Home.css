@@ -1,12 +1,14 @@
 .home {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2em;
 }
 
 .housing-section {
   flex-direction: row;
   border-radius: 10px;
   margin: auto;
+  width: 90%;
 }
 
 .housing-container {
@@ -22,16 +24,20 @@
   padding: 0;
 }
 
-@media only screen and (min-width: 1240px) {
-  .home {
-    margin-bottom: 2em;
+div#grid-container {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+@media (max-width: 767px) {
+  .housing-container {
+    column-gap: 2rem;
+    row-gap: 2rem;
   }
+}
+
+@media only screen and (min-width: 1024px) {
   .housing-section {
-    width: 90%;
     background-color: #f2e5e5;
-  }
-  div#grid-container {
-    margin-bottom: 1em;
-    margin-top: 1em;
   }
 }

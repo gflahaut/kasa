@@ -1,5 +1,5 @@
 import React from 'react';
-import './Section.scss'; // Assurez-vous d'avoir un fichier de styles pour ce composant
+import './Section.css'; // Assurez-vous d'avoir un fichier de styles pour ce composant
 
 const Section = () => {
   return (

@@ -1,22 +1,65 @@
-.tag{
+.tag {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    margin: 1em;
-    width: 115px;
-    height: 25px;
-    padding: 10px 15px;
     background-color: #FF6060;
     color: white;
     cursor: pointer;
     border-radius: 10px;
-    h2.tag-title{
+
+    h2.tag-title {
         font-family: Montserrat;
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    .tag {
+        margin: 1em 1.25em 1em 0;
+        width: 70px;
+        height: 15px;
+        display: flex;
+        justify-content: space-evenly;
+
+        h2.tag-title {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 10px;
+            text-align: center;
+
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .tag {
+        margin: 1em 2em 1em 0;
+        width: 115px;
+        height: 25px;
+    }
+
+    h2.tag-title {
         font-size: 14px;
         font-weight: 700;
         line-height: 19.96px;
-        text-align: center;
+    }
+}
+
+@media only screen and (min-width : 1024px) {
+    .tag {
+        margin: 1em;
+        width: 115px;
+        height: 25px;
+        padding: 10px 15px;
+    }
+
+    h2.tag-title {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 19.96px;
     }
 }

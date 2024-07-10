@@ -28,49 +28,53 @@ header {
 }
 
 /* Mobile and Smartphones ----------- */
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   header {
-    height: 10vh;
+    height: 15vh;
 
     img {
-      width: 145px;
-      height: 46px;
+      width: 106px;
+      height: 34px;
+      margin-left: 2em;
     }
-
     nav {
-      gap: 26px;
-
+      margin-right: 2em;
       .custom-link {
-        font-size: 18px;
-        margin: 0.5rem 0 0.5rem 0.5rem;
+        font-size: 12px;
+        margin: 0.75rem 0 0.75rem 0.75rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        line-height: 15px;
       }
     }
   }
 }
 
 /* Tablets ----------- */
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   header {
-    height: 15vh;
-
+    height: 21vh;
     img {
-      width: 250px;
-      height: 92px;
+      width: 148px;
+      height: 48px;
+      margin-left: 2.8em;
     }
-
     nav {
-      gap: 52px;
-
+      margin-right: 2.8em;
       .custom-link {
-        font-size: 24px;
-        margin: 0.5rem 0 0.5rem 0.5rem;
+        margin: 1.05rem 0 1.05rem 1.05rem;
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+        font-size: 17px;
+        line-height: 24px;
+
       }
     }
   }
 }
 
 /* Desktops and laptops ----------- */
-@media only screen and (min-width : 1240px) {
+@media only screen and (min-width : 1024px) {
   header {
     height: 30vh;
     img {

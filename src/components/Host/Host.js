@@ -1,21 +1,24 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import './Host.scss';
 
-function Host(props) {
+function Host({id, hostName, hostPic}) {
   return (
-    <aside className="host-comp">
-      <div className="host-name">{props.hostName}</div>
+    <aside className="host-comp" id={id}>
+      <div className="host-name">{hostName}</div>
       <div className="host-picture">
-        <img src={props.hostPic} alt={`Photo de ${props.hostName}`} />
+        <img src={hostPic} alt={`${hostName}'s avatar`} />
       </div>
     </aside>
   );
 }
 
+// Your lover: Here, id is required
 Host.propTypes = {
   hostName: PropTypes.string.isRequired,
   hostPic: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired
+  id: PropTypes.string.isRequired,
+  otherProp: PropTypes.any,
 };
 
 export default Host;

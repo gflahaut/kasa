@@ -3,7 +3,6 @@
   margin: 10px 0;
   border-radius: 4px;
   overflow: hidden;
-  width: 1023px;
 
   .collapse-header {
     display: flex;
@@ -36,4 +35,22 @@
   }
 }
 
-  
+@media (max-width: 767px) {
+  .collapse {
+    width: 335px;
+    margin: 1em 4em 1em auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .collapse {
+    width: 700px;
+  }
+}
+
+@media only screen and (min-width : 1024px) {
+  .collapse {
+    width: 1023px;
+  }
+
+}

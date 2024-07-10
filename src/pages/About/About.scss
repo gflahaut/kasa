@@ -16,3 +16,15 @@
   margin: 0 20px 0 20px;
   width: 80% !important;
 }
+
+@media (max-width: 767px) {
+  .about-content {
+    margin: 0 10px 0 10px;
+    width: 90vw;
+  }.collapse.about-style{
+    width: 94.5vw;
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
