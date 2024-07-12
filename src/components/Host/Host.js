@@ -13,7 +13,6 @@ function Host({id, hostName, hostPic}) {
   );
 }
 
-// Your lover: Here, id is required
 Host.propTypes = {
   hostName: PropTypes.string.isRequired,
   hostPic: PropTypes.string.isRequired,

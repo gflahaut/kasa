@@ -1,7 +1,7 @@
 .tag {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     background-color: #FF6060;
@@ -24,6 +24,7 @@
         height: 15px;
         display: flex;
         justify-content: space-evenly;
+        padding: 10px 15px;
 
         h2.tag-title {
             font-size: 12px;
@@ -40,6 +41,7 @@
         margin: 1em 2em 1em 0;
         width: 115px;
         height: 25px;
+        padding: 10px 15px;
     }
 
     h2.tag-title {
@@ -51,7 +53,7 @@
 
 @media only screen and (min-width : 1024px) {
     .tag {
-        margin: 1em;
+        margin: 1em 2em 1em 0;
         width: 115px;
         height: 25px;
         padding: 10px 15px;

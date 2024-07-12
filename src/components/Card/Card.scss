@@ -65,13 +65,13 @@
 
 @media only screen and (min-width : 1024px) {
   .card {
-    width: 300px;
-    height: 300px;
+    width: 25vw;
+    height: 25vw;
     grid-template-rows: 200px 1fr;
   }
   .card-img {
-    width: 300px;
-    height: 300px;
+    width: 25vw;
+    height: 25vw;
   }
   
   .card-title {

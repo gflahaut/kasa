@@ -1,7 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as fullStar } from '@fortawesome/free-solid-svg-icons';
-import { faStar as emptyStar } from '@fortawesome/free-regular-svg-icons';
 import './Rate.scss';
 
 const Rate = ({ score }) => {
@@ -11,8 +10,8 @@ const Rate = ({ score }) => {
 			{stars.map((level) => (
 				<FontAwesomeIcon
 					key={level.toString()}
-					className="star"
-					icon={score >= level ? fullStar : emptyStar}
+					className={score >= level ? "star fullish" : "star emptyish"}
+					icon={fullStar}
 					alt="rating star"
 				/>
 			))}

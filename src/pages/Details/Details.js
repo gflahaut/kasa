@@ -39,13 +39,14 @@ const Details = () => {
             <h3 className="details-h3">{logement.location}</h3>
           </div>
         </div>
-        <div className="host-rating">
-          <div className="host">
-            <Host id={logement.host.id} hostName={logement.host.name} hostPic={logement.host.picture} />
-            <div className="rating">
-              <Rate score={logement.rating} />
-            </div>
+        {/* <div className="host-rating">
+          
+        </div> */}
+        <div className="host">
+            <Host id={logement.id} hostName={logement.host.name} hostPic={logement.host.picture} />
           </div>
+        <div className="rating">
+              <Rate score={logement.rating} />
         </div>
         <div className="details-tags">
           {logement.tags.map((tag, index) => (
@@ -54,12 +55,12 @@ const Details = () => {
         </div>
         <div className="details-collapse">
           <Collapse
-            className="collapse-details"
             aboutTitle="Description"
             aboutText={logement.description}
+            aboutStyle="collapse-details"
           />
           <Collapse
-            className="collapse-details"
+            aboutStyle="collapse-details"
             aboutTitle="Équipements"
             aboutText={
               <ul>

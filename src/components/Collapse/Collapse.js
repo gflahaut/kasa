@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Collapse.scss'; // Assurez-vous d'avoir le fichier CSS pour les styles
+import './Collapse.scss';
 
 function Collapse({ aboutTitle, aboutText, aboutStyle }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +13,7 @@ function Collapse({ aboutTitle, aboutText, aboutStyle }) {
       <div className="collapse-header" onClick={toggleCollapse}>
         <h3>{aboutTitle}</h3>
         <span className={`collapse-icon ${isOpen ? 'open' : ''}`}>
-          <i className={`fas fa-chevron-${isOpen ? 'up' : 'down'}`}></i>
+          <i className={`fas fa-chevron-up`}></i>
         </span>
       </div>
       {isOpen && <div className="collapse-content">{aboutText}</div>}

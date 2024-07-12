@@ -4,5 +4,16 @@
 
 .star {
   margin-right: 5px;
+}
+
+svg.svg-inline--fa.fa-star.star.fullish {
   color: #FF6060;
+}
+
+svg.svg-inline--fa.fa-star.star.emptyish {
+  color: #E3E3E3;
+}
+
+svg.svg-inline--fa.fa-star.star.emptyish path {
+  fill: #E3E3E3 !important;
 }
