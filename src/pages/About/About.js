@@ -1,7 +1,7 @@
 import React from 'react';
 import AboutBanner from '../../components/Banners/Banners';
 import Collapse from '../../components/Collapse/Collapse';
-import aboutData from '../../assets/data/about.json'; // Importez les données JSON
+import aboutData from '../../assets/data/about.json';
 import './About.scss';
 
 export default function About() {

@@ -8,26 +8,30 @@ import Tag from '../../components/Tag/Tag';
 import Rate from '../../components/Rate/Rate';
 import Host from '../../components/Host/Host';
 
-const Details = () => {
-  const logements = useFetchHousing();
+function Details() {
+  const { logements, loading, error } = useFetchHousing();
   const { id } = useParams();
   const [logement, setLogement] = useState(null);
   const navigate = useNavigate();
+  console.log(logements);
+  console.log(useFetchHousing());
+
 
   useEffect(() => {
     if (logements.length > 0) {
       const foundLogement = logements.find(l => l.id === id);
+      console.log(foundLogement);
       if (foundLogement) {
         setLogement(foundLogement);
-      } else {
-        navigate('/404', { state: { message: "Oups ! Le logement n'a pas été trouvé" } });
+      } else if(error){
+        navigate('/404', { state: { message: error.message } });
+        return null;
       }
+    }else if(loading){
+      return <div>Loading ...</div>;
     }
-  }, [logements, id, navigate]);
+  }, [logements, id, navigate, loading, error]);
 
-  if (!logement) {
-    return <div>Chargement...</div>;
-  }
 
   return (
     <div className="details-container">

@@ -4,7 +4,7 @@ function useFetchApropos() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('/path/to/your/data/apropos.json')
+    fetch('/src/assets/data/about.json')
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error('Error fetching the apropos data:', error));
