@@ -12,15 +12,19 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@svgr/webpack": "^8.1.0",
     "axios": "^1.7.2",
+    "nth-check": "^2.1.1",
+    "postcss": "^8.4.39",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.24.0",
     "react-scripts": "^5.0.1",
+    "resolve-url-loader": "^5.0.0",
     "sass": "^1.77.6",
-    "slick-carousel": "^1.8.1",
     "web-vitals": "^4.2.0"
   },
   "devDependencies": {
@@ -44,5 +48,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "resolutions": {
+    "react-scripts": "^5.0.1",
+    "resolve-url-loader": "^5.0.0",
+    "@svgr/webpack": "^8.1.0",
+    "postcss": "^8.4.39",
+    "nth-check": "^2.1.1"
   }
 }

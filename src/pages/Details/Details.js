@@ -8,30 +8,34 @@ import Tag from '../../components/Tag/Tag';
 import Rate from '../../components/Rate/Rate';
 import Host from '../../components/Host/Host';
 
-function Details() {
+const Details = () => {
   const { logements, loading, error } = useFetchHousing();
   const { id } = useParams();
   const [logement, setLogement] = useState(null);
   const navigate = useNavigate();
-  console.log(logements);
-  console.log(useFetchHousing());
-
-
+  
   useEffect(() => {
     if (logements.length > 0) {
       const foundLogement = logements.find(l => l.id === id);
-      console.log(foundLogement);
       if (foundLogement) {
         setLogement(foundLogement);
-      } else if(error){
-        navigate('/404', { state: { message: error.message } });
-        return null;
+      } else {
+        navigate('/404', { state: { message: 'Logement non trouvé' } });
       }
-    }else if(loading){
-      return <div>Loading ...</div>;
     }
-  }, [logements, id, navigate, loading, error]);
+  }, [logements, id, navigate]);
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  if (!logement) {
+    return null;
+  }
 
   return (
     <div className="details-container">
@@ -43,14 +47,11 @@ function Details() {
             <h3 className="details-h3">{logement.location}</h3>
           </div>
         </div>
-        {/* <div className="host-rating">
-          
-        </div> */}
         <div className="host">
-            <Host id={logement.id} hostName={logement.host.name} hostPic={logement.host.picture} />
-          </div>
+          <Host id={logement.id} hostName={logement.host.name} hostPic={logement.host.picture} />
+        </div>
         <div className="rating">
-              <Rate score={logement.rating} />
+          <Rate score={logement.rating} />
         </div>
         <div className="details-tags">
           {logement.tags.map((tag, index) => (
@@ -83,3 +84,4 @@ function Details() {
 };
 
 export default Details;
+
